@@ -9,3 +9,21 @@ ChristmasMovie = {'christmas vacation': ['cousion eddie', 'griswolds', 'shitters
 'jingle all the way': ['arnold', 'turbo man', 'sinbad', 'shopping', 'santa fight', 'booster', 'drunk reindeer', 'bouncy ball'],
 'the santa clause': ['kills santa', 'tim allen', 'santa suit', 'north pole', 'scott calvin', 'bernard'],
 'a charlie brown christmas': ['chralie brown', 'snoopy', 'peanuts', 'charles schulz', 'little tree', 'meaning of christmas']}
+
+randomXmasMovie = random.choice(dict(enumerate(ChristmasMovie)))
+guess = ""
+attributes = ChristmasMovie[randomXmasMovie]
+print ("Let's play a game!")
+print ("Guess the Christmas Movie I'm thinking of.")
+
+while guess != randomXmasMovie:
+    if guess in attributes:
+         print ("yes")
+    elif guess in ChristmasMovie.keys():
+         print ("Try Again")
+    elif guess != "":
+        print ("no")
+
+    guess = raw_input('What Christmas Movie am I thinking of?').lower()
+
+print ("Thats It You Win!!!")

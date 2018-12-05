@@ -18,11 +18,11 @@ print ("Guess the Christmas Movie I'm thinking of.")
 
 while guess != randomXmasMovie:
     if guess in attributes:
-         print ("yes")
+         print ("Yes! What movie is that from?")
     elif guess in ChristmasMovie.keys():
-         print ("Try Again")
+         print ("Nope Try Again")
     elif guess != "":
-        print ("no")
+        print ("Nope Keep Guessing")
 
     guess = raw_input('What Christmas Movie am I thinking of?').lower()
 
